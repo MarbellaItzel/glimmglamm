@@ -1,0 +1,133 @@
+.productos-contenedor {
+    padding: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.titulo-productos {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+.card-producto {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-producto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.card-producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+.nombre-producto {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.precio-producto {
+    color: #e91e63;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+
+.btn-agregar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.btn-agregar:hover {
+    background-color: #e91e63;
+}
+
+.productos-contenedor {
+    margin-top: 50px;  
+}
+
+.grid-productos .sin-productos {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #7b4e6c;
+    font-weight: bold;
+    padding: 25px 0;
+    background-color: #ffe6f5;
+    border: 2px solid #d88ca4;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+
+@media (max-width: 768px) {
+
+    .productos-contenedor {
+        padding: 15px;
+        margin-top: 90px; 
+    }
+
+    .titulo-productos {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .grid-productos {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+
+    .card-producto {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+
+    .card-producto img {
+        height: 170px;
+        border-radius: 8px;
+    }
+
+
+    .nombre-producto {
+        font-size: 1rem;
+    }
+
+    .precio-producto {
+        font-size: 1.1rem;
+    }
+
+
+    .btn-agregar {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+

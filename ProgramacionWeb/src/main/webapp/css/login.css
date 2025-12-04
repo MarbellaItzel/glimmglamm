@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pantalla-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+}
+
+.logo-small {
+    height: 50px;
+    object-fit: contain;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-amarillo {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f4c542;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-amarillo:hover {
+    background-color: #e0b030;
+}
+
+.olvide {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: none;
+}
+
+.olvide:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+.message-container {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+@media (max-width: 480px) {
+    .pantalla-login {
+        padding: 1.5rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .btn-amarillo {
+        font-size: 0.95rem;
+    }
+}

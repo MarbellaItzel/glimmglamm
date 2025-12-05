@@ -123,6 +123,26 @@ h2 {
     background-color: #28a745;
 }
 
+.validador {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex;
+  gap: 8px; /* Espacio entre validadores si hay más de uno */
+}
+
+.validador-css {
+  position: fixed;
+  bottom: 10px;
+  right: 135px;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex;
+  gap: 8px; /* Espacio entre validadores si hay más de uno */
+}
+
+
+
 @media (max-width: 480px) {
     .pantalla-login {
         padding: 1.5rem;

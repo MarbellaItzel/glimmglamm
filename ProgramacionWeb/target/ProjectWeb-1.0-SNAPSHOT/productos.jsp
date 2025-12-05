@@ -199,6 +199,18 @@ db.close();
 
 </div>
 
+<div class="validador">
+                <a href="https://validator.w3.org/check?uri=referer" target="_blank">
+                    <img src="https://www.w3.org/Icons/valid-html401" alt="¡HTML válido!" width="88" height="31">
+                </a>
+            </div>
+
+            <div class="validador-css">
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                    <img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS válido!" width="88" height="31">
+                </a>
+            </div>
+
 </main>
 
 <footer>

@@ -14,6 +14,17 @@
 
 <body>
 
+<%@ page import="java.security.MessageDigest" %>
+<%! 
+    public String hashPassword(String pass) throws Exception {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte[] digest = md.digest(pass.getBytes("UTF-8"));
+        StringBuilder hex = new StringBuilder();
+        for (byte b : digest) hex.append(String.format("%02x", b));
+        return hex.toString();
+    }
+%>
+
 <%
     String correo = request.getParameter("email");
     String contrasena = request.getParameter("password");
@@ -24,11 +35,14 @@
         try {
             db.open();
 
+            // 🔑 Aplica el hash antes de comparar
+            String hashedPass = hashPassword(contrasena);
+
             PreparedStatement ps = db.getCon().prepareStatement(
                 "SELECT * FROM usuarios WHERE correo = ? AND contrasena = ?"
             );
             ps.setString(1, correo);
-            ps.setString(2, contrasena);
+            ps.setString(2, hashedPass);
 
             ResultSet rs = ps.executeQuery();
 
@@ -39,7 +53,6 @@
                 session.setAttribute("rol", rol);   
 
                 db.close();
-
                 response.sendRedirect("index.jsp");
                 return;
             } else {
